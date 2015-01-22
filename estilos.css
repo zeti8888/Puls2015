@@ -127,16 +127,16 @@ header #logo
 	-ms-transform:rotate(90deg);*/
 	border-right: 1px solid white;
 	margin-right: 0.5em;
-
 }
 header #logo img
 {
 	margin-right: 0.5em;
 	padding-right: 0.5em;
 	width: 52px;
-}
-header #logo img:hover{
 	-webkit-transition:.5s;
+}
+header #logo img:hover
+{	
 	-webkit-transform:rotate(360deg);
 }
 nav
@@ -286,8 +286,8 @@ aside{
 		width: 49%;
 		float: left;
 	}
-	#contenido .item:nth-child(even){
-		margin-left: 2%;
+	#contenido .item:nth-child(odd){
+		margin-right: 2%;
 	}
 }
 
