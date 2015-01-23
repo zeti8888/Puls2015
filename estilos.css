@@ -186,10 +186,11 @@ nav ul li
 }
 nav ul li a
 {
-	 color: white;
-	 display: block;
-	 padding: 0.5em;
-	 -webkit-transition:.3s;
+	color: white;
+	display: block;
+	padding: 0.5em;
+	text-decoration: none;
+	-webkit-transition:.3s;
 }
 nav ul li a:hover{
 	background: #343B54;
@@ -271,6 +272,20 @@ aside{
 #contenido .item .votacion .guardar_item
 {
 	float: right;
+}
+.zeti
+{
+	background: #283c48;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 5px 5px; 
+	color: #22BCE0;;
+	display: block;
+	font-size: 1.5em;
+	height: 2em;
+	line-height: 2em;
+	padding: .2em 0;
+	text-align: center;
+	text-decoration: none;	
+	text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
 }
 /*@media print{
 	body{
