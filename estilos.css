@@ -10,7 +10,6 @@
 
 }
 */
-
 @font-face {
 	font-family: 'puls4';
 	src:url('fuentes/puls4.eot');
@@ -176,6 +175,12 @@ nav ul #publicar_nav a:before{
 nav ul #publicar_nav a:hover:before{
 	font-size: 20px;	
 }
+nav ul #publicar_nav a.disabled
+{
+	background-color: grey;
+	cursor: default;
+	box-shadow: none;
+}
 nav ul li a:hover{
 	background: #343B54;
 }
@@ -273,6 +278,9 @@ aside{
 {
 	float: right;
 }
+#publicar_nav a:hover{
+	box-shadow: rgba(235, 250, 0, 0.5) 5px 5px 10px;
+}
 .zeti
 {
 	background: #283c48;
@@ -342,4 +350,11 @@ FORMILARIO
 	color: white;
 	font-style: italic;
 	text-shadow: rgba(0, 0, 0. 0.5) 2px 2px 5px;
+}
+
+.shadow
+{
+    -moz-box-shadow: 3px 1px 3px 4px #ccc;
+    -webkit-box-shadow: 3px 1px 3px 4px #ccc;
+    box-shadow: 3px 1px 3px 4px #ccc;
 }

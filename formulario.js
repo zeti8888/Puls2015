@@ -7,6 +7,7 @@ var $form = $('#formulario'),
 
 function mostrarFormulario(){
 	$form.slideToggle();
+	$list.slideToggle();
 	return false;
 }
 
@@ -27,9 +28,15 @@ function agregarPost(){
 
 	$('#titulo').val("");
 	$('#url').val("");
+	$list.slideToggle();
+	$form.slideToggle();
 	return false;
 }
-
 // Eventos
-$button.click( mostrarFormulario );
+$button.click( function(){
+	if(!$('#publicar_nav a').hasClass('disabled'))
+	{
+		mostrarFormulario();
+	};
+});
 $form.on('submit', agregarPost );
