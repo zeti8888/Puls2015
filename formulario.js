@@ -5,38 +5,47 @@ var $form = $('#formulario'),
 	$list = $('#contenido'),
 	$post = $('.item').first();
 
-function mostrarFormulario(){
-	$form.slideToggle();
-	$list.slideToggle();
-	return false;
+if (localStorage.getItem('autosave'))
+{
+	$titulo.val(sessionStorage.getItem('titulo'));
+	$url.val(sessionStorage.getItem('url'));
 }
 
-function agregarPost(){
+var id = setInterval(function(){
+	sessionStorage.setItem('titulo', $titulo.val());
+	sessionStorage.setItem('url', $url.val());
+}, 1000);
+
+function mostrarOcultarFormulario(){
+	$form.slideToggle();
+	$list.slideToggle();
+}
+
+function agregarPost(evento){
+	console.log(evento);
 	var url = $url.val(),
 		titulo = $titulo.val(),
-		$clone = $post.clone();
+		clone = $post.clone();
 
-	$clone.find('.titulo_item a')
+	clone.find('.titulo_item a')
 		.text(titulo)
 		.attr('href', url);
 
-	$clone.hide();
+	clone.hide();
 
 	$list.prepend($clone);
-
-	$clone.fadeIn();
-
-	$('#titulo').val("");
-	$('#url').val("");
-	$list.slideToggle();
-	$form.slideToggle();
-	return false;
+	mostrarOcultarFormulario();
+	$titulo.val('');
+	$url.val('');
+	clone.slideDown();
 }
 // Eventos
-$button.click( function(){
+$button.click( function(evento){
+	evento.preventDefault();
+	console.log(evento);
 	if(!$('#publicar_nav a').hasClass('disabled'))
 	{
-		mostrarFormulario();
+		mostrarOcultarFormulario();
 	};
 });
 $form.on('submit', agregarPost );

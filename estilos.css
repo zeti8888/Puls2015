@@ -8,8 +8,9 @@
     font-weight: normal;
     font-style: normal;
 
-}
-*/
+}*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 @font-face {
 	font-family: 'puls4';
 	src:url('fuentes/puls4.eot');
@@ -295,11 +296,43 @@ aside{
 	text-decoration: none;	
 	text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
 }
-/*@media print{
-	body{
-		font-size: 50px;
-	}
-}*/
+
+/*
+FORMILARIO
+*/
+
+.formulario
+{
+	display: none;
+	padding: 1em;
+	text-align: right;
+}
+
+.formulario input
+{
+	border-radius: 5px;
+	padding: 0.2em 0.6em;
+}
+.formulario input[type="text"],
+.formulario input[type="url"]{
+	border: 1px solid #888;
+}
+.formulario input[type="submit"]
+{
+	background: #22BCE0;
+	box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;
+	color: white;
+	font-style: italic;
+	text-shadow: rgba(0, 0, 0. 0.5) 2px 2px 5px;
+	color: white;
+}
+
+.shadow
+{
+    -moz-box-shadow: 3px 1px 3px 4px #ccc;
+    -webkit-box-shadow: 3px 1px 3px 4px #ccc;
+    box-shadow: 3px 1px 3px 4px #ccc;
+}
 
 @media screen and (min-width:800px){
 	#contenido{
@@ -324,37 +357,4 @@ aside{
 	aside video{
 		width: 100%;
 	}
-}
-
-/*
-FORMILARIO
-*/
-
-.formulario
-{
-	display: none;
-	padding: 1em;
-	text-align: right;
-}
-
-.formulario input
-{
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 0.2em 0.6em;
-}
-.formulario input[type="submit"]
-{
-	background: #22BCE0;
-	box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;
-	color: white;
-	font-style: italic;
-	text-shadow: rgba(0, 0, 0. 0.5) 2px 2px 5px;
-}
-
-.shadow
-{
-    -moz-box-shadow: 3px 1px 3px 4px #ccc;
-    -webkit-box-shadow: 3px 1px 3px 4px #ccc;
-    box-shadow: 3px 1px 3px 4px #ccc;
 }
