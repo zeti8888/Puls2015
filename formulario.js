@@ -21,8 +21,7 @@ function mostrarOcultarFormulario(){
 	$list.slideToggle();
 }
 
-function agregarPost(evento){
-	console.log(evento);
+function agregarPost(){
 	var url = $url.val(),
 		titulo = $titulo.val(),
 		clone = $post.clone();
@@ -33,11 +32,12 @@ function agregarPost(evento){
 
 	clone.hide();
 
-	$list.prepend($clone);
+	$list.prepend(clone);
 	mostrarOcultarFormulario();
 	$titulo.val('');
 	$url.val('');
 	clone.slideDown();
+	return false;
 }
 // Eventos
 $button.click( function(evento){
